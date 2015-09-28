@@ -9,7 +9,8 @@
 FROM ubuntu:14.04
 
 RUN apt-get update && apt-get -y install php5-cli \
-                                         curl
+                                         curl \
+                                         git
 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN ./composer.phar global require psecio/iniscan
